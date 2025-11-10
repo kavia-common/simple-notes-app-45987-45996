@@ -1,0 +1,233 @@
+:root {
+  /* Colors */
+  --color_f5f3ff: #f5f3ff;
+  --color_ffffff: #ffffff;
+  --color_c4c4c4: #c4c4c4;
+  --color_fbfbfb: #fbfbfb;
+  --color_242424: #242424;
+  --color_f7f7f7: #f7f7f7;
+  --color_d6d6d6: #d6d6d6;
+  --color_898989: #898989;
+  --color_7f6bff: #7f6bff;
+  --color_f3f3f3: #f3f3f3;
+  --color_f8f8f8: #f8f8f8;
+  --color_d4d4d4: #d4d4d4;
+  --color_bebebe: #bebebe;
+  --color_f0f0f0: #f0f0f0;
+  --color_d0d0d0: #d0d0d0;
+  --color_ebebeb: #ebebeb;
+  --color_5c4bc5: #5c4bc5;
+  --color_7e6deb: #7e6deb;
+  --color_493c9a: #493c9a;
+  --color_c3baff: #c3baff;
+  --color_bae2ff: #bae2ff;
+
+  /* Spacing (standardized) */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Shadows (none defined in DS; providing common defaults) */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Typography variables (subset critical used on this screen; full could be generated similarly) */
+:root {
+  /* typo_29 */
+  --typo-29-family: "SF Pro Display", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --typo-29-size: 18px;
+  --typo-29-weight: 400;
+  --typo-29-line-height: 21.48046875px;
+  --typo-29-letter-spacing: 0.9px;
+  --typo-29-align: left;
+  --typo-29-color: var(--color_242424);
+
+  /* typo_30 */
+  --typo-30-family: "SF Pro Display", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --typo-30-size: 16px;
+  --typo-30-weight: 500;
+  --typo-30-line-height: 19.09375px;
+  --typo-30-letter-spacing: 0.8px;
+  --typo-30-align: left;
+  --typo-30-color: var(--color_242424);
+
+  /* typo_31 */
+  --typo-31-family: "SF Pro Display", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --typo-31-size: 18px;
+  --typo-31-weight: 500;
+  --typo-31-line-height: 21.48046875px;
+  --typo-31-letter-spacing: 0.36px;
+  --typo-31-align: left;
+  --typo-31-color: var(--color_242424);
+
+  /* typo_32 */
+  --typo-32-family: "SF Pro Display", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --typo-32-size: 18px;
+  --typo-32-weight: 400;
+  --typo-32-line-height: 21.48046875px;
+  --typo-32-letter-spacing: 0.36px;
+  --typo-32-align: left;
+  --typo-32-color: var(--color_242424);
+
+  /* typo_33 */
+  --typo-33-family: "SF Pro Display", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --typo-33-size: 18px;
+  --typo-33-weight: 400;
+  --typo-33-line-height: 21.48046875px;
+  --typo-33-letter-spacing: 0.36px;
+  --typo-33-align: left;
+  --typo-33-color: var(--color_bebebe);
+
+  /* typo_34 */
+  --typo-34-family: "SF Pro Display", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --typo-34-size: 18px;
+  --typo-34-weight: 600;
+  --typo-34-line-height: 21.48046875px;
+  --typo-34-letter-spacing: 0.36px;
+  --typo-34-align: left;
+  --typo-34-color: var(--color_242424);
+
+  /* typo_35 */
+  --typo-35-family: "SF Pro Display", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --typo-35-size: 16px;
+  --typo-35-weight: 400;
+  --typo-35-line-height: 19.09375px;
+  --typo-35-letter-spacing: 0.32px;
+  --typo-35-align: left;
+  --typo-35-color: var(--color_242424);
+
+  /* typo_36 */
+  --typo-36-family: "SF Pro Display", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --typo-36-size: 16px;
+  --typo-36-weight: 600;
+  --typo-36-line-height: 19.09375px;
+  --typo-36-letter-spacing: 0.8px;
+  --typo-36-align: left;
+  --typo-36-color: var(--color_ffffff);
+
+  /* typo_37 */
+  --typo-37-family: "SF Pro Display", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --typo-37-size: 40px;
+  --typo-37-weight: 600;
+  --typo-37-line-height: 47.734375px;
+  --typo-37-letter-spacing: 0.8px;
+  --typo-37-align: left;
+  --typo-37-color: var(--color_242424);
+
+  /* typo_38 */
+  --typo-38-family: "Roboto", Arial, Helvetica, sans-serif;
+  --typo-38-size: 18px;
+  --typo-38-weight: 400;
+  --typo-38-line-height: 21.09375px;
+  --typo-38-letter-spacing: 0px;
+  --typo-38-align: left;
+  --typo-38-color: var(--color_242424);
+
+  /* typo_39 */
+  --typo-39-family: "Roboto", Arial, Helvetica, sans-serif;
+  --typo-39-size: 12px;
+  --typo-39-weight: 400;
+  --typo-39-line-height: 14.0625px;
+  --typo-39-letter-spacing: 0px;
+  --typo-39-align: left;
+  --typo-39-color: var(--color_242424);
+
+  /* typo_40 */
+  --typo-40-family: "SF Pro Display", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --typo-40-size: 10px;
+  --typo-40-weight: 600;
+  --typo-40-line-height: 11.93359375px;
+  --typo-40-letter-spacing: 0.2px;
+  --typo-40-align: left;
+  --typo-40-color: var(--color_242424);
+
+  /* typo_41 */
+  --typo-41-family: "SF Pro Display", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --typo-41-size: 10px;
+  --typo-41-weight: 400;
+  --typo-41-line-height: 11.93359375px;
+  --typo-41-letter-spacing: 0.2px;
+  --typo-41-align: left;
+  --typo-41-color: var(--color_242424);
+
+  /* typo_42 */
+  --typo-42-family: "SF Pro Display", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --typo-42-size: 5px;
+  --typo-42-weight: 400;
+  --typo-42-line-height: 5.966796875px;
+  --typo-42-letter-spacing: 0.1px;
+  --typo-42-align: left;
+  --typo-42-color: var(--color_242424);
+
+  /* typo_43 */
+  --typo-43-family: "Roboto", Arial, Helvetica, sans-serif;
+  --typo-43-size: 22px;
+  --typo-43-weight: 500;
+  --typo-43-line-height: 25.78125px;
+  --typo-43-letter-spacing: 0px;
+  --typo-43-align: left;
+  --typo-43-color: var(--color_242424);
+}
+
+/* Styles tokens as CSS custom properties (backgrounds, borders, radius, opacity) */
+:root {
+  --style-2-border-radius: 8px;
+  --style-3-bg: var(--color_ffffff);
+  --style-11-bg: var(--color_242424);
+  --style-11-opacity: 0.5;
+  --style-12-bg: var(--color_7f6bff);
+  --style-12-radius: 8px;
+  --style-14-bg: var(--color_ffffff);
+  --style-14-opacity: 0.5;
+  --style-15-border-color: var(--color_242424);
+  --style-15-border-width: 1.5px;
+  --style-16-bg: var(--color_f8f8f8);
+  --style-16-radius: 8px;
+  --style-17-border-color: var(--color_242424);
+  --style-17-border-width: 2px;
+  --style-18-border-color: var(--color_d4d4d4);
+  --style-18-border-width: 1px;
+  --style-19-border-color: var(--color_242424);
+  --style-19-border-width: 1.5px;
+  --style-19-opacity: 0.5;
+  --style-20-bg: var(--color_242424);
+  --style-20-opacity: 0.2;
+  --style-21-bg: var(--color_f8f8f8);
+  --style-21-border-color: var(--color_bebebe);
+  --style-21-border-width: 1px;
+  --style-21-radius: 8px;
+  --style-22-border-color: var(--color_bebebe);
+  --style-22-border-width: 1.5px;
+  --style-23-bg: var(--color_bebebe);
+  --style-24-border-color: var(--color_242424);
+  --style-24-border-width: 2px;
+  --style-24-opacity: 0.5;
+  --style-25-border-color: var(--color_ffffff);
+  --style-25-border-width: 1.5px;
+  --style-26-bg: var(--color_f0f0f0);
+  --style-26-border-color: var(--color_ffffff);
+  --style-26-border-width: 2px;
+  --style-27-bg: var(--color_d0d0d0);
+  --style-27-border-color: var(--color_ffffff);
+  --style-27-border-width: 2px;
+  --style-28-border-color: var(--color_ffffff);
+  --style-28-border-width: 2px;
+  --style-29-bg: var(--color_242424);
+  --style-29-opacity: 0.8;
+  --style-30-border-color: var(--color_ebebeb);
+  --style-30-border-width: 0.2px;
+  --style-31-bg: var(--color_ffffff);
+  --style-31-border-color: var(--color_ebebeb);
+  --style-31-border-width: 0.2px;
+}
+
+/* Resets and base */
+* { box-sizing: border-box; }
+body { margin: 0; }
+.figma-screen { position: relative; overflow: hidden; background: var(--color_ffffff); }
+.abs { position: absolute; }
+.img-cover { object-fit: cover; display: block; }
+.round { border-radius: 50%; }

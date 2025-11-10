@@ -1,48 +1,59 @@
-import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useMemo, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
+import './index.css';
+import Header from './components/Header';
+import NotesListPage from './pages/NotesListPage';
+import NoteDetailPage from './pages/NoteDetailPage';
+import CreateNotePage from './pages/CreateNotePage';
+import FigmaPreviewPage from './pages/FigmaPreviewPage';
+import { NotesProvider } from './context/NotesContext';
+import { ThemeProvider, useTheme } from './context/ThemeContext';
+import { getEnvConfig } from './services/config';
 
-// PUBLIC_INTERFACE
-function App() {
-  const [theme, setTheme] = useState('light');
+/**
+ * Root application container that wires providers and routes.
+ * Defaults to local-only mode (localStorage persistence) but reads environment variables
+ * for potential future backend wiring.
+ */
+function AppShell() {
+  const { theme } = useTheme();
 
-  // Effect to apply theme to document element
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
 
-  // PUBLIC_INTERFACE
-  const toggleTheme = () => {
-    setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
-  };
+  const env = useMemo(() => getEnvConfig(), []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <button 
-          className="theme-toggle" 
-          onClick={toggleTheme}
-          aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-        >
-          {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
-        </button>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          Current theme: <strong>{theme}</strong>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-root">
+      <Router>
+        <NotesProvider>
+          <Header env={env} />
+          <main className="container">
+            <Routes>
+              <Route path="/" element={<NotesListPage />} />
+              <Route path="/new" element={<CreateNotePage />} />
+              <Route path="/note/:id" element={<NoteDetailPage />} />
+              <Route path="/_figma" element={<FigmaPreviewPage />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </main>
+        </NotesProvider>
+      </Router>
     </div>
+  );
+}
+
+/**
+ * PUBLIC_INTERFACE
+ * App entry wraps the ThemeProvider to supply theme state across the app.
+ */
+function App() {
+  return (
+    <ThemeProvider>
+      <AppShell />
+    </ThemeProvider>
   );
 }
 
